@@ -1,0 +1,15 @@
+--uruchomienie --
+pypy master.py
+pypy sge-master.py
+
+// wygenerowano run-sim-*.sh
+//////
+// ponizszy skrypcik do realizacji symulacji
+#!/bin/bash
+for i in $(seq 1 500)
+do
+	sh run-sim-"$i".sh
+done
+//////
+
+mono --runtime=v4.0 viewer.exe

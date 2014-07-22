@@ -1,0 +1,43 @@
+
+R version 3.1.0 (2014-04-10) -- "Spring Dance"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+> library('fields')
+Loading required package: spam
+Spam version 0.29-3 (2013-04-23) is loaded.
+Type 'help( Spam)' or 'demo( spam)' for a short introduction 
+and overview of this package.
+Help for individual functions is also obtained by adding the
+suffix '.spam' to the function name, e.g. 'help( chol.spam)'.
+
+Attaching package: 'spam'
+
+The following objects are masked from 'package:base':
+
+    backsolve, forwardsolve
+
+Loading required package: maps
+> 
+> tbl = t(as.matrix(read.table('heatmap.Rdata')))
+Warning message:
+In file(file, "rt") :
+  cannot open file 'heatmap.Rdata': No such file or directory
+Error in t(as.matrix(read.table("heatmap.Rdata"))) : 
+  error in evaluating the argument 'x' in selecting a method for function 't': Error in as.matrix(read.table("heatmap.Rdata")) : 
+  error in evaluating the argument 'x' in selecting a method for function 'as.matrix': Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+Execution halted
